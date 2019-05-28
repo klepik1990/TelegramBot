@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"c:\projects\some-prac\TelegramBot\TelegramBot"
+$VIRTUAL_ENV = r"c:\projects\TelegramBot\TelegramBot\TelegramBot"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

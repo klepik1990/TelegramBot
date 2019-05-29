@@ -4,7 +4,6 @@ import requests
 import random
 import os
 
-print(requests.__version__)
 
 bot = telebot.TeleBot('846482624:AAERvZ94oVMrqLULMsqQI-ro0Ce-H-b3by0')
 page = 'https://www.anekdot.ru/random/anekdot/'

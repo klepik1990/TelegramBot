@@ -5,22 +5,21 @@ import random
 import os
 
 
-BOT_TELEGRAM_TOKEN = os.environ.get('BOT_TELEGRAM_TOKEN')
-bot = telebot.TeleBot('BOT_TELEGRAM_TOKEN')
-# bot = telebot.TeleBot('846482624:AAERvZ94oVMrqLULMsqQI-ro0Ce-H-b3by0')
+# BOT_TOKEN = os.environ.get('BOT_TELEGRAM_TOKEN')
+# bot = telebot.TeleBot('BOT_TOKEN')
+bot = telebot.TeleBot('846482624:AAERvZ94oVMrqLULMsqQI-ro0Ce-H-b3by0')
 page = 'https://www.anekdot.ru/random/anekdot/'
 headers = {'User-Agent': 'My User Agent 1.0'}
 
 
-def get_token():
-    token = os.getenv('token')
-    return token
+# def get_token():
+#     token = os.environ.get('BOT_TELEGRAM_TOKEN', '')
+#     return token
 
 def new_anekdot():
     response = requests.get(page, headers=headers)
     soup = BeautifulSoup(response.content, 'html.parser')
     anekdots = soup.find_all("div", class_="text", limit=4)
-    # random_anekdot = str(random.choice(anekdots))
     clear_raw = random.choice(anekdots).get_text()
     return clear_raw
 

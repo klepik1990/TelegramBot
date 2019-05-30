@@ -1,1 +1,1 @@
-web: python TelegramBot.py
+web: python TelegramBot.py runserver 0.0.0.0:5000

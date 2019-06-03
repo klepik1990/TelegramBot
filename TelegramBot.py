@@ -24,7 +24,7 @@ def new_anekdot():
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
-    if message.text == "привет":
+    if repr(message.text) == "привет":
         bot.send_message(message.from_user.id, "привет в ответ")
     elif message.text == "/help":
         bot.send_message(message.from_user.id, "Напиши 'привет'")

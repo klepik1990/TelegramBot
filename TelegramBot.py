@@ -26,7 +26,7 @@ def get_text_messages(message):
         bot.send_message(message.from_user.id, "Напиши 'привет'")
     elif message.text == "/anekdot":
         bot.send_message(message.from_user.id, new_anekdot())
-    elif message.text == "пока":
+    elif message.text.encode("UTF-8") == "пока":
         bot.send_message(message.from_user.id, "пока и тебе")
     else:
         bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши /help.")

@@ -1,10 +1,12 @@
+# -*- coding: utf-8 -*-
+
 from bs4 import BeautifulSoup
 import telebot
 import requests
 import random
 
 
-# -*- coding: utf-8 -*-
+
 
 
 bot = telebot.TeleBot('846482624:AAERvZ94oVMrqLULMsqQI-ro0Ce-H-b3by0')

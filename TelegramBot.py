@@ -5,9 +5,6 @@ import requests
 import random
 
 
-
-
-
 bot = telebot.TeleBot('846482624:AAERvZ94oVMrqLULMsqQI-ro0Ce-H-b3by0')
 page = 'https://www.anekdot.ru/random/anekdot/'
 headers = {'User-Agent': 'My User Agent 1.0'}
@@ -29,7 +26,7 @@ def get_text_messages(message):
         bot.send_message(message.from_user.id, "Напиши 'привет'")
     elif message.text == "/anekdot":
         bot.send_message(message.from_user.id, new_anekdot())
-    elif message.text == 'пока':
+    elif message.text == "пока":
         bot.send_message(message.from_user.id, "пока и тебе")
     else:
         bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши /help.")

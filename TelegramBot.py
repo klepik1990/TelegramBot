@@ -2,19 +2,15 @@ from bs4 import BeautifulSoup
 import telebot
 import requests
 import random
-import os
 
 
-# BOT_TOKEN = os.environ.get('BOT_TELEGRAM_TOKEN')
-# bot = telebot.TeleBot('BOT_TOKEN')
+# -*- coding: utf-8 -*-
+
+
 bot = telebot.TeleBot('846482624:AAERvZ94oVMrqLULMsqQI-ro0Ce-H-b3by0')
 page = 'https://www.anekdot.ru/random/anekdot/'
 headers = {'User-Agent': 'My User Agent 1.0'}
 
-
-# def get_token():
-#     token = os.environ.get('BOT_TELEGRAM_TOKEN', '')
-#     return token
 
 def new_anekdot():
     response = requests.get(page, headers=headers)
